@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <title>Registration form</title>
+ <link rel="stylesheet" type="text/css" href="css/style.css">
+ <style>
+	*{
+	margin:0px;
+	padding:0px;
+}
+h2{
+	margin-bottom:9px;
+    font-family: "Times New Roman", Times, serif;
+	margin-left: 11px;
+	
+}
+.main{
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+    background-size: cover;
+	margin:0 auto;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	width:100%;
+}
+label{
+	margin-left:20px;
+	margin-top:25px;
+	font-size:20px;
+	font-family: "Times New Roman", Times, serif;
+	
+}
+#firstname,#lastname,#password,#email,#dob,#phonenumber{
+	width:522px;
+	height:24px;
+	border-radius:4px;
+    outline:none;
+	border-style:none;
+	padding-top:4px;
+	padding-bottom:4px;
+	padding-left:10px;
+	color:dark;
+	margin-left:20px;
+	margin-top:3px;
+	
+}
+
+input{
+	font-size:15px;
+	margin-right:13px;
+	
+}
+
+span{
+	font-size:20px;
+	color:white;
+	font-family: "Times New Roman", Times, serif;
+}
+
+#btn{
+	margin-top: 12px;
+    margin-left: 20px;
+    width:90px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-family: "Times New Roman", Times, serif;
+    background-color:RGB(4,170,109);
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    padding: 9px;
+
+}
+#btn1{
+	margin-top: 12px;
+    margin-left:-11px;
+    width:90px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-family: "Times New Roman", Times, serif;
+    background-color:#0000FF;
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    padding: 9px;
+
+}
+.sub-main {
+	background-color:rgb(221, 221, 221);
+	width: 571px;
+	padding-top: 12px;
+	height: 615px;
+	margin-left: 11px;
+	height: 622px;
+	border-radius: 5px;
+}
+#country{
+	width: 531px;
+    height: 34px;
+	border-radius:4px;
+    outline:none;
+	border-style:none;
+	padding-top:4px;
+	padding-bottom:4px;
+	padding-left:10px;
+	color:black;
+	margin-left:20px;
+	margin-top:3px;
+	border-color:2px solid white;
+	background-color: white;
+}
+textarea{
+	margin-left:20px;
+	margin-top:3px;
+	border-style:none;
+	border-radius:4px;
+	outline:none;
+	width:523px;
+	border-color:2px solid gray;
+	padding-top:5px;
+	padding-left:10px;
+	color:gray;
+}
+.massage{
+	margin-left:20px;
+	color:red;
+}
+
+#customers {
+	font-family: Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 56%;
+	margin-top: 20px;
+	margin: 0px auto;
+	margin-top: 0px;
+	margin-top: 20px;
+	cursor: pointer;
+  }
+  
+  
+#customers td, #customers th {
+	border: 1px solid #ddd;
+	padding: 8px;
+	
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #04AA6D;
+	color: white;
+
+  }
+ </style>
+  </head>
+   <body>
+    <div class="main">
+   <form name="myform">  
+		<h2>Contact Form</h2>
+	 <div class="sub-main">
+	    <div>
+		  <label for="firstname">First Name:</label><span></span><br>
+		  <input type="text" Name="firstname" id="firstname" placeholder="FirstName">
+		</div><br>
+		
+		 <div>
+		  <label for="lastname">Last Name:</label><br>
+		  <input type="text" Name="lastname" id="lastname" placeholder="LastName">
+		</div><br>
+		
+		 <div>
+		  <label for="phonenumber">Phone Number:</label><br>
+		  <input type="text" Name="phonenumber" id="phonenumber" placeholder="Phone Number"><span id="numloc"></span>
+		</div><br>
+		
+		 <div>
+		  <label for="email">Email:</label><span></span><br>
+		  <input type="text" Name="email" id="email" placeholder="Email"><span class="massage"></span>
+		</div>
+		
+		<div>
+		  <label for="contry">Country:</label><br>
+		  <select for="country" id="country" >
+			<option value="" id="" selected>---select---</option>
+		    <option value="Bangladesh" id="country">Bangladesh</option>
+			<option value="Australia" id="country">Australia</option>
+			<option value="Nepal" id="country" >Nepal</option>
+			<option value="America" id="country">America</option>
+		  </select>
+		</div>
+		<br>
+		<div>
+		   <label for="subject">Subject:</label><br>
+		   <textarea rows="10" name="subject" id="subject">Write Something..
+		   </textarea>
+		</div>
+		
+		<div>
+		  <input type="submit" value="Submit" id="btn">	
+		  <input type="reset"  value="Reset" id="btn1">	
+		</div>
+		</div>
+    </form><br>
+	</div>
+
+	<table id="customers">
+		<thead id="thead">
+		<tr>
+		  <th>Full Name</th>
+		  <th>Phone Number</th>
+		  <th>Email</th>
+		  <th>Country</th>
+		  <th>Subject</th>
+		  <th>Delete</th>
+		</tr>
+	</thead>
+	<tbody id="tbody">
+		
+	</tbody>
+</table>
+	<script>
+const firstname=document.myform.firstname.value; 
+const lastname=document.myform.lastname.value;
+const phonenumber=document.myform.phonenumber.value; 
+const a=document.myform.email.value;  
+const country=document.myform.country.value;
+const massage1=document.myform.subject.value;
+var btn=document.getElementById("btn");
+ btn.addEventListener('click',(pera)=>{
+	pera.preventDefault();
+	const firstname=document.myform.firstname.value; 
+	var test=firstname.length;
+	if(test<2)
+	{
+		alert("First Name must be 2 character");
+		return false;
+	}
+	var lastname=document.myform.lastname.value;  
+	var test=lastname.length;
+	if(test<2){
+		alert("Last Name must be 2 character");
+		return false;
+	}
+	var phonenumber=document.myform.phonenumber.value;  
+	if (phonenumber==''){  
+		alert("Must be phone Number input");
+		return false;  
+		}
+    if (isNaN(phonenumber)){  
+    alert("numeric value only phone number");
+    return false;  
+    }
+	
+	var a=document.myform.email.value; 
+	if(a=='')
+	{
+		alert("Must be input Email");
+		return false;
+	}
+
+	if(a.indexOf('@')<=0){
+		alert("**first position @ Invalid ");
+		return false;
+	}
+	if(a.charAt(a.length-4)!=='.'&& a.charAt(a.length-3)!=='.'){
+		alert("**Invalid . position");
+		return false;
+	}
+	var country=document.myform.country.value;  
+    if (country==''){  
+    alert("Must be selected country");
+    return false;  
+    }
+
+	var massage1=document.myform.subject.value;  
+    if (massage1=="")
+	{  
+    alert("Must be input subject");
+    return false;  
+    }
+	
+	else
+	{
+		var tbody=document.getElementById('tbody');
+		var tr=document.createElement('tr');
+		var td=document.createElement('td');
+		td.innerHTML=firstname+" "+lastname;
+		tr.appendChild(td);
+ 
+	
+		
+		var td2=document.createElement('td');
+		td2.innerHTML=phonenumber;
+		tr.appendChild(td2);
+
+		
+		var td3=document.createElement('td');
+		td3.innerHTML=a;
+		tr.appendChild(td3);
+
+		var td4=document.createElement('td');
+		td4.innerHTML=country;
+		tr.appendChild(td4);
+
+
+		var td5=document.createElement('td');
+		td5.innerHTML=massage1;
+		tr.appendChild(td5);
+
+		var td6=document.createElement('td');
+		td6.innerHTML="<h4 color:black; onclick=myDeleteFunction(this)>Remove</h4>";
+		tr.appendChild(td6);
+
+		tbody.appendChild(tr);
+		alert("Submit Successfull");
+        
+		
+	
+	}
+	b.classList.add(massage);
+ });
+
+        function myDeleteFunction() {
+           
+            document.getElementById("customers").deleteRow(1);
+}  
+</script>
+  </body>
+</html>
